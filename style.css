@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #ffecd2, #fc9ff1);
+}
+.navbar {
+  width: 100%;
+  background-color: #ff7f7f; 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+.subnav{
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-inner {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ a {
+  font-family: "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-inner a:not(:last-of-type) {
+  margin-right: 35px;
+}
+
+.hamburger {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.hamburger img{
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: #000;
+    height: 30px;
+}
+
+
+.hero{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sub-hero{
+    flex: 1;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 20px;
+    
+}
+.hero-img{
+    width: 160%;
+    height: 100%;
+}
+.hero-head{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 40px;
+     font-family: 'Poppins', sans-serif;
+}
+.hero-para{
+    font-size:23px;
+    margin-bottom: 60px;
+}
+.hero-button{
+         background-color: #ff7a73;
+         padding: 10px 70px 10px 70px;
+         font-size: 20px;
+         color: white;
+         border: none;
+}
+.info{
+  width: 100%;
+  display: flex;
+  margin: 200px 0 200px 0;
+
+}
+.info-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+   display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 200px 200px;
+  gap: 10px;
+  overflow: hidden;
+}
+.img1{
+   width: 300px;
+   height: 200px;
+}
+.img2{
+   width: 300px;
+   height: 200px;
+}
+.img3{
+  width: 300px;
+  height: 400px;
+}
+.box img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.box img:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.box img:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 300px;
+  height: 410px;
+  object-fit: cover;
+}
+.info-tab{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+
+.info-tamplate{
+  background-color:#ff7a73;
+  width: 500px;
+  padding: 20px;
+
+}
+.info-tamplate h4{
+   font-weight: 200;
+}
+.info-tamplate h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+.info-tab button{
+     background-color: #00000000;
+     display: flex;
+     align-items: center;
+     border: none;
+}
+
+@media (max-width: 968px) {
+nav{width: 100%;}
+  .nav-inner {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .nav-inner a {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-inner.active a {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .hero,.info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .sub-hero{
+    width: 100%;   
+  }
+  .info-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 200px 200px;
+  gap: 10px;
+}
+.img1, .img2{
+   width: 300px;
+   height: 200px;
+}
+.img2{
+   width: 300px;
+   height: 200px;
+}
+.img3{
+  width: 600px;
+  height: 200px;
+}
+.box img:nth-child(1) {
+   grid-column: 1;
+  grid-row: 1;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.box img:nth-child(2) {
+   grid-column: 2;
+  grid-row: 1;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.box img:nth-child(3) {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  width: 610px;
+  height: 410px;
+  object-fit: cover;
+}
+.info-tamplate{
+  width: 100%;
+}
+}
+@media (max-width:625px) {
+  .img1, .img2{
+    width: 50%;
+    height: 200px;
+  }
+  .img3{
+    width: 100%;
+    height: 200px;
+  }
+   .box{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 200px 200px;
+  gap: 10px;
+}
+}
